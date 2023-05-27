@@ -5,6 +5,7 @@ const cors = require('cors')
 
 app.use(express.json())
 
+
 let persons = [
     { 
       "id": 1,
@@ -33,6 +34,8 @@ morgan.token('data',(req,resp)=>{return JSON.stringify(req.body)})
 app.use(morgan(':method :url :status :total-time[digits]ms :data '))
 
 app.use(cors())
+
+app.use(express.static('./build'))
 app.get('/', (request, response) => {
     response.send('<h1>Hello World!</h1>')
 })
