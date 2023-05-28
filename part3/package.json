@@ -7,7 +7,10 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "mongodb": "^5.5.0",
+    "mongoose": "^7.2.1",
     "morgan": "^1.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -16,7 +19,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "build:ui": "rmdir /s /q frontendbuild && cd C:\\Users\\kokboon\\Documents\\GitHub\\fullstackopen23part0to2\\part2\\\"part 2.15 to 2.17\" && npm run build && xcopy build \"C:\\Users\\kokboon\\Documents\\GitHub\\fullstackopen2023_part3\\part3\\frontbuild\" /e /i"
   },
   "eslintConfig": {
     "extends": [
