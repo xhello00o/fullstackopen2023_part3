@@ -133,7 +133,7 @@ const errorHandler = (error, request, response, next) => {
         response.statusMessage = error.statusMessage
         return response
             .status(error.status)
-            .send({ error: { message: error.message } })
+            .send({ error: { error: error.message } })
     }
 
     if (error.name === 'ValidationError') {
