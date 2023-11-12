@@ -33,4 +33,10 @@ A command-line interface was build to save new entries directly from the command
 
 __PUT__
 - /api/persons/:id
+### Validation and ESlint ( Exercise 3.19 to 3.22 )[^1]
+Validation was added using ```{validate: ... } ``` option under mongoose. ESLint was also created to help with structure of the code.
+
+
+
+[^1]: There is no seperate folder created. Instead, the exercises are done on top of the previous exercises. 
 
